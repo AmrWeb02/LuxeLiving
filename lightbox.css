@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    padding: 1rem 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+    background-color: var(--section-color);
+    color: var(--background-color);
+}
+.left-item{
+    flex-basis: 30%;
+}
+.right-item{
+    flex-basis:70%;
+}
+.grid{
+    /* border:1px solid red; */
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+}
+.grid img{
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.grid img:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 6px 21px 11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 6px 21px 11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 6px 21px 11px rgba(0,0,0,0.75);
+}
+#lightbox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.75);
+    display: none;
+}
+#lightbox.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slides{
+    display: flex;
+    justify-content: center;
+}
+.slides img{
+    width: 90%;
+    object-fit: contain;
+}
+span.close{
+    color: white;
+    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin: 0 1rem;
+    transition: all 0.5s ease;
+}
+#leftArrow{
+    position: absolute;
+    left:0;
+    margin-left: 2rem;
+    padding: 0 1rem;
+    font-size: 4rem;
+    color:white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+#rightArrow{
+    position: absolute;
+    right:0;
+    margin-right: 2rem;
+    padding: 0 1rem;
+    font-size: 4rem;
+    color:white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+#leftArrow:hover{
+    transform:translateX(-0.5rem);
+}
+#rightArrow:hover{
+    transform:translateX(0.5rem);
+}
+span.close:hover{
+    background-color: rgba(0,0,0,0.75) ;
+}
+main div.ar p{
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+}
+main div.en p{
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+}
+.services-info{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    padding:1.5rem 0;
+}
+.f-end{
+    justify-content: flex-end;
+}
+@media (max-width: 929px) {
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+        order:2;
+    }
+    .grid img{
+        height: auto;
+    }
+    .slides img{
+        width: 95%;
+    }
+    #rightArrow{
+        margin-right: 1rem;
+        padding:0 0.5rem;
+        font-size: 2rem;
+    }
+    #leftArrow{
+        margin-left: 1rem;
+        padding:0 0.5rem;
+        font-size: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }
+}
+@media (min-width: 768px) {
+    .slides{
+        height: 720px;
+    }
+}

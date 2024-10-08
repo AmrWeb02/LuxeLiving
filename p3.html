@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="lightbox.css">
+</head>
+<body>
+    <header>
+        <nav class="flex align-center flex-between lang en">
+            <a href="index.html" id="logo">
+                <img src="./assets/luxe.jfif" alt="">
+            </a>
+            <button class="btn margin-auto lang en">EN | 🌏︎</button>
+            <ul class="link-container flex">
+                <li> <a href="index.html">Main Page</a></li>
+                <li> <a href="plans.html">Plans</a></li>
+                <li> <a href="projects.html">Projects</a></li>
+                <li> <a href="AboutUs.html">About Us</a></li>
+                <li> <a href="ContactUs.html">Contact Us</a></li>  
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="English side-bar hidden flex flex-col">
+                <a href="index.html">Main Page</a>
+                <a href="plans.html">Plans</a>
+                <a href="projects.html">Projects</a>
+                <a href="AboutUs.html">About Us</a>   
+                <a href="ContactUs.html">Contact Us</a>
+            </div>
+            <!-- <div class="overlay"></div> -->
+        </nav>
+        <nav class="flex align-center flex-between lang ar">
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="Arabic side-bar hidden flex flex-col right">
+                <a href="ContactUs.html">اتصل بنا</a>
+                <a href="AboutUs.html">من نحن</a>
+                <a href="projects.html">مشاريعنا</a>
+                <a href="plans.html">باقات التشطيب</a>
+                <a href="index.html">الصفحة الرئيسية</a>
+            </div>
+            <ul class="link-container flex">
+                <li> <a href="ContactUs.html">اتصل بنا</a></li>
+                <li> <a href="AboutUs.html">من نحن</a></li>    
+                <li> <a href="projects.html">مشاريعنا</a></li>
+                <li> <a href="plans.html">باقات التشطيب</a></li>
+                <li> <a href="index.html">الصفحة الرئيسية</a></li>
+            </ul>
+            <button class="btn margin-auto lang ar">AR | 🌏︎</button>
+            <a href="index.html" id="logo">
+                <img src="./assets/luxe.jfif" alt="">
+            </a>
+            <!-- <div class="overlay"></div> -->
+
+        </nav>
+    </header>
+    <main>
+        <div class="left-item lang en">
+            <h1>Traditional Saudi women's seating area architectural design</h1>
+            <hr>
+            <p>We present to you one of our projects: a 140 square meter new classic apartment design and finishing project in Talkha, Dakahlia Governorate. We have adopted the new classic style in the design as per the client's choice. The project is currently in the execution and finishing phase, adhering to the highest standards and featuring an integrated engineering design.</p>
+            <div class="services-info">
+                <h3>Client <hr><span>Amr</span></h3>
+                <h3>Location <hr><span>Oman</span></h3>
+                <h3>Date <hr> <span>1/8/2024</span></h3>
+            </div>
+        </div>
+        <div id="lightbox">
+            <span class="close">&times;</span>
+            <!-- <span>&#11013</span> -->
+            <span id="leftArrow" onclick="changePic(-1)">&#10094</span>
+            <span id="rightArrow" onclick="changePic(1)">&#10095</span>
+            <!-- <div class="slides s1">
+                <img src="./assets/2-3.webp">
+            </div> -->
+        </div>
+        <div class="grid right-item">
+            <img src="./assets/project3/6028358982646742668.jpg" id="0">
+            <img src="./assets/project3/6028358982646742669.jpg" id="1">
+            <img src="./assets/project3/6028358982646742670.jpg" id="2">
+            <img src="./assets/project3/6028358982646742671.jpg" id="3">
+            <img src="./assets/project3/6028358982646742672.jpg" id="4">
+            <img src="./assets/project3/6028358982646742673.jpg" id="5">
+            <img src="./assets/project3/6028358982646742674.jpg" id="6">
+            <img src="./assets/project3/6028358982646742675.jpg" id="7">
+        </div>
+        <div class="left-item lang ar right">
+            <h1>تصميم مجلس نساء كلاسيكي بالسعودية</h1>
+            <hr>
+            <p>نقدم لكم أحد مشاريعنا: مشروع تصميم وتشطيب شقة نيو كلاسيك بمساحة 140 متر مربع في مدينة طلخا بمحافظة الدقهلية. لقد اعتمدنا على الطراز النيو كلاسيك في التصميم حسب اختيار العميل. المشروع حاليًا في مرحلة التنفيذ والتشطيب، ملتزمين بأعلى المعايير والتصميم الهندسي المتكامل.</p>
+            <div class="services-info right f-end">
+                <h3>العميل<hr><span>عمرو</span></h3>
+                <h3>الموقع<hr><span>عمان</span></h3>
+                <h3>التاريخ<hr> <span>1/8/2024</span></h3>
+            </div>
+        </div>
+    </main>
+    <footer class="lang en">
+        <div class="slogan flex align-center flex-col">
+            <h1>Transforming your home dreams into reality</h1>
+        </div>
+        <div class="info-area flex align-center">
+            <div class="item-left">
+                <h2>Main Branch</h2>
+                <p>97 Highway st</p>
+                <h2>Second Branch</h2>
+                <p>91 Highway st</p>
+            </div>
+            <div class="item-right">
+                <h3>Follow us on Social Media</h3>
+                <a href="#" target="_blank">
+                    <img src="./assets/FaceBook.svg"  id="facebook">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="./assets/twitter.svg" id="twitter">
+                </a>
+                <a href="#" target="_blank" >
+                    <img src="./assets/Instagram.svg" id="instagram">  
+                </a>
+                <a href="#" target="_blank">
+                    <img src="./assets/Youtube.svg" id="youtube">                    
+                </a>
+            </div>
+        </div>
+    </footer>
+    <footer class="lang ar">
+        <div class="slogan flex align-center flex-col">
+            <h1>نحول أحلامك المنزلية إلى واقع ملموس </h1>
+        </div>
+        <div class="info-area flex align-center right">
+            <div class="item-right">
+                <h3>تابعونا علي المنصات المختلفة</h3>
+                <a href="#" target="_blank">
+                    <img src="./assets/FaceBook.svg"  id="facebook">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="./assets/twitter.svg" id="twitter">
+                </a>
+                <a href="#" target="_blank" >
+                    <img src="./assets/Instagram.svg" id="instagram">  
+                </a>
+                <a href="#" target="_blank">
+                    <img src="./assets/Youtube.svg" id="youtube">                    
+                </a>
+            </div>
+            <div class="item-left">
+                <h2>الفرع الرئيسي</h2>
+                <p>المنصورة برج الشربيني الدور السابع</p>
+                <h2>الفرع الثاني</h2>
+                <p>مدينة 6 اكتوبر برج البرعي بلازا  امام مسجد الحصري الدور الثاني</p>
+            </div>
+        </div>
+    </footer>
+    <script src="lightbox.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

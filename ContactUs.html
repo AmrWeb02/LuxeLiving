@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="ContactUs.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <header>
+        <nav class="flex align-center flex-between lang en">
+            <a href="index.html" id="logo">
+                <img src="./assets/luxe.jfif" alt="">
+            </a>
+            <button class="btn margin-auto lang en">EN | 🌏︎</button>
+            <ul class="link-container flex">
+                <li> <a href="index.html">Main Page</a></li>
+                <li> <a href="plans.html">Plans</a></li>
+                <li> <a href="projects.html">Projects</a></li>
+                <li> <a href="AboutUs.html">About Us</a></li>
+                <li> <a href="ContactUs.html">Contact Us</a></li>  
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="English side-bar hidden flex flex-col">
+                <a href="index.html">Main Page</a>
+                <a href="plans.html">Plans</a>
+                <a href="projects.html">Projects</a>
+                <a href="AboutUs.html">About Us</a>   
+                <a href="ContactUs.html">Contact Us</a>
+            </div>
+            <!-- <div class="overlay"></div> -->
+        </nav>
+        <nav class="flex align-center flex-between lang ar">
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="Arabic side-bar hidden flex flex-col right">
+                <a href="ContactUs.html">اتصل بنا</a>
+                <a href="AboutUs.html">من نحن</a>
+                <a href="projects.html">مشاريعنا</a>
+                <a href="plans.html">باقات التشطيب</a>
+                <a href="index.html">الصفحة الرئيسية</a>
+            </div>
+            <ul class="link-container flex">
+                <li> <a href="ContactUs.html">اتصل بنا</a></li>
+                <li> <a href="AboutUs.html">من نحن</a></li>    
+                <li> <a href="projects.html">مشاريعنا</a></li>
+                <li> <a href="plans.html">باقات التشطيب</a></li>
+                <li> <a href="index.html">الصفحة الرئيسية</a></li>
+            </ul>
+            <button class="btn margin-auto lang ar">AR | 🌏︎</button>
+            <a href="index.html" id="logo">
+                <img src="./assets/luxe.jfif" alt="">
+            </a>
+            <!-- <div class="overlay"></div> -->
+
+        </nav>
+    </header>
+  <div class="hero">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#CEC6AEcc" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <div class="flex info-flex">
+        <div class="location  f-item">
+            <a href="http://">
+                <img src="./assets/location-pin.png" alt="Location icon">
+            </a>
+            <h3>Visit Us</h3>
+            <a href="http://">Loc</a>
+        </div>
+        <div class="Phone f-item">
+            <a href="tel:+123456">
+                <img src="./assets/telephone1.svg" alt="">
+            </a>
+            <h3>Phone</h3>
+            <a href="tel:+123456">123456</a>
+        </div>
+        <div class="email f-item">
+            <a href="mailto:blabla@gmail.com">
+                <img src="./assets/email.png" alt="">
+            </a>
+            <h3>Location</h3>
+            <a href="mailto:blabla@gmail.com">blabla@gmail.com</a>
+        </div>
+    </div>
+    <form id="form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a6fd7101-03f2-424a-a2c4-7297a34819fc">
+      <div class="input-group test">
+        <input type="text" id="name" name="name">
+        <label for="name" class="extra"><img src="./assets/user.png" alt="user icon">Full Name</label>
+        <p class="red" id="nameError">Full Name is required.</p>
+      </div>
+      <div class="input-group">
+        <input type="number" id="number" name="phone">
+        <label for="number" class="extra"> <img src="./assets/telephone.png" alt="telephone icon">Your Number</label>
+        <p class="red" id="phoneError">Please enter a valid 10-digit phone number.</p>
+      </div>
+      <div class="input-group">
+        <input type="email" id="email" name="email">
+        <label for="email" class="extra"> <img src="./assets/email.png" alt="email icon">Email</label>
+        <p class="red" id="emailError">Please enter a valid email address.</p>
+      </div>
+      <div class="input-group">
+        <input type="text" id="subject" name="subject">
+        <label for="subject" class="extra"> <img src="./assets/subject.png" alt="question mark icon">Subject</label>
+        <p class="red" id="subjectError">Subject is required.</p>
+      </div>
+      <div class="input-group">
+        <textarea id="message" rows="8" name="message"></textarea>
+        <label for="message"><img src="./assets/chat.png" class="specialAlignment" alt="chat icon">Your Message</label>
+        <p class="red" id="messageError">Message should be at least 10 characters long.</p>
+      </div>
+      <button type="submit" onclick="validateForm(event)">Submit  <img src="./assets/plane.png" alt="plane send icon"></button>
+    </form>
+  </div>
+  <footer class="lang en">
+    <div class="slogan flex align-center flex-col">
+        <h1>Transforming your home dreams into reality</h1>
+    </div>
+    <div class="info-area flex align-center">
+        <div class="item-left">
+            <h2>Main Branch</h2>
+            <p>97 Highway st</p>
+            <h2>Second Branch</h2>
+            <p>91 Highway st</p>
+        </div>
+        <div class="item-right">
+            <h3>Follow us on Social Media</h3>
+            <a href="#" target="_blank">
+                <img src="./assets/FaceBook.svg"  id="facebook">
+            </a>
+            <a href="#" target="_blank">
+                <img src="./assets/twitter.svg" id="twitter">
+            </a>
+            <a href="#" target="_blank" >
+                <img src="./assets/Instagram.svg" id="instagram">  
+            </a>
+            <a href="#" target="_blank">
+                <img src="./assets/Youtube.svg" id="youtube">                    
+            </a>
+        </div>
+    </div>
+</footer>
+<footer class="lang ar">
+    <div class="slogan flex align-center flex-col">
+        <h1>نحول أحلامك المنزلية إلى واقع ملموس </h1>
+    </div>
+    <div class="info-area flex align-center right">
+        <div class="item-right">
+            <h3>تابعونا علي المنصات المختلفة</h3>
+            <a href="#" target="_blank">
+                <img src="./assets/FaceBook.svg"  id="facebook">
+            </a>
+            <a href="#" target="_blank">
+                <img src="./assets/twitter.svg" id="twitter">
+            </a>
+            <a href="#" target="_blank" >
+                <img src="./assets/Instagram.svg" id="instagram">  
+            </a>
+            <a href="#" target="_blank">
+                <img src="./assets/Youtube.svg" id="youtube">                    
+            </a>
+        </div>
+        <div class="item-left">
+            <h2>الفرع الرئيسي</h2>
+            <p>المنصورة برج الشربيني الدور السابع</p>
+            <h2>الفرع الثاني</h2>
+            <p>مدينة 6 اكتوبر برج البرعي بلازا  امام مسجد الحصري الدور الثاني</p>
+        </div>
+    </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="index.js"></script>
+  <script src="ContactUs.js"></script>
+
+</body>
+</html>

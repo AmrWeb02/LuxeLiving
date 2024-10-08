@@ -1,0 +1,102 @@
+.grid{
+    display: grid;
+    grid-template-columns: 0.8fr 280px;
+    grid-template-areas: "info ceoImg";
+    grid-auto-rows: max-content;
+    justify-content: space-between;
+    background: radial-gradient(at center, var(--section-color), #F1E4D4);
+    padding: 1.5rem;
+}
+div.information{
+    grid-area:info;
+    color:var(--background-color);
+    text-align: justify;
+}
+div.progress.lang.arabicE{
+    direction: rtl;
+}
+.profile-card{
+    grid-area:ceoImg;
+    cursor: pointer;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.5rem;
+    align-items: center;
+    text-align: center;
+    padding-top:0.5rem;
+    justify-content: center;
+    position: relative;
+}
+.profile-card div.position{
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    background-color: beige;
+    position: absolute;
+    opacity: 0.9;
+    transition: opacity 0.5s ease;
+    bottom: 0;
+}
+div.img img{
+    border-radius: 50%;
+    width: 280px;
+    max-height: 300px;
+}
+.filter{
+    filter:grayscale(1);
+    transition: filter 0.5s ease;
+}
+.filter:hover{
+    filter:grayscale(0);
+}
+div.colleagues{
+    display: flex;
+    row-gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: radial-gradient(at center bottom, var(--section-color), #F1E4D4);
+    padding: 1.5rem;
+}
+.w3-container {
+    content: "";
+    display: table;
+    clear: both
+}
+.w3-color{
+    color: #fff!important;
+    font-weight: bold;
+    padding: 0 1rem;
+    background-color: var(--secondary-color);
+    /* background-color: #bd9834; */
+}
+.w3-round-xlarge {
+    border-radius: 16px
+}
+div.progress p{
+    padding-top: 1rem;
+}
+@media (max-width: 765px) {
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: "info"
+                             "ceoImg"
+        ;
+    }
+    .profile-card{
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+    div.grid div.img img{
+        width: 70%;
+        max-height: 350px;
+    }
+    div.colleagues img{
+        width: 70%;
+        max-height: 350px;
+    }
+}
