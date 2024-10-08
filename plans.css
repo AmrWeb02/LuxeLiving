@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #34BEAA;       /* Main branding color, used for buttons and highlights */
+    --secondary-color: #238485;     /* Complementary color, used for secondary elements */
+    --background-color: #235176;     /* Background color for pages or sections */
+    --accent-color: #E5E8AA;        /* Accent color for borders, highlights, or subtle backgrounds */
+    --text-color-light: #D2BF53;    /* Light text color for headings or important text */
+    --text-color-dark: #3B3937;     /* Dark text color for body text or primary content */
+    --old-color:#fdfaf698;
+    --cyan-color:##00d0ff;
+    --section-color:#f8f9e5;
+}
+body{
+    font-size: 1.2rem;
+}
+section{
+    background-color: var(--section-color);
+    padding-top: 20px;
+}
+.package-name{
+    margin: 0rem 1.5rem;
+    color:var(--background-color);
+}
+section p{
+    text-align: justify;
+    color:var(--background-color);
+}
+.accordiation{
+    /* border:2px solid red; */
+    margin-bottom: 10px;
+    -webkit-box-shadow: 10px 10px 15px 1px rgba(0,0,0,0.1);
+-moz-box-shadow: 10px 10px 15px 1px rgba(0,0,0,0.1);
+box-shadow: 10px 10px 15px 1px rgba(0,0,0,0.1);
+}
+.accordiation-header{
+    height: 120px;
+    position: relative;
+    /* background-color: #CFB6B6; */
+    background-color: var(--primary-color);
+    color:black;
+    /* border:2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.accordiation-header:hover{
+    /* background-color: #837272; */
+    background-color: var(--secondary-color);
+    color:#fff;
+}
+.accordiation-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: all  0.3s ease;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    text-align: justify;
+}
+.accordiation-content img{
+    max-width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.accordiation-content ul{
+    list-style-type:square;
+}
+.accordiation-content li{
+    padding: 1rem 0;
+    font-size: 1.4rem;
+}
+.accordiation-content li::maker{
+    color:rgb(124, 88, 20);
+}
+.accordiation-header::after{
+    content: "";
+    background: url(./assets/icons8-arrow-60.png) no-repeat 0 0;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+.accordiation.on ::after{
+    transform: rotate(90deg);
+}
+.accordiation.on{
+    background-color: white;
+}
+.accordiation.on .accordiation-content{
+    max-height: 1400px;
+    padding:0 30px;
+}
+.grid{
+    padding: 50px 0;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:30px;
+}
+/*Main*/
+main h1{
+    padding:1rem 1.5rem;
+    color: var(--background-color);
+    text-align: center;}
+main p{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+}
+main.lang.right.en div.grid ul{
+    direction: rtl;
+}
+main.right p{
+    direction: rtl;
+}
+.rtl{
+    direction: rtl;
+}
+@media (max-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
